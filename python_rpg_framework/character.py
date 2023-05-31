@@ -2,6 +2,8 @@
 The base class for the player and any NPCs in the game. Will have attributes
 and behavior common to all characters
 """
+import dm
+
 
 class Character:
     """Any playing and non-playing characters share these traits
@@ -20,10 +22,11 @@ class Character:
         self.class_name = class_name
 
         # initialize all remaining stats (we'll create a function to set them)
-        self.strength = 0
-        self.dexterity = 0
-        self.constitution = 0
-        self.intelligence = 0
+        self.strength = dm.roll_stats()
+        self.dexterity = dm.roll_stats()
+        self.constitution = dm.roll_stats()
+        self.intelligence = dm.roll_stats()
+
 
     def get_stats(self) -> str:
         """ return a formatted string of stats """
