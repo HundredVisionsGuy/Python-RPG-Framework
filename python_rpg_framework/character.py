@@ -26,7 +26,7 @@ class Character:
         self.dexterity = dm.roll_stats()
         self.constitution = dm.roll_stats()
         self.intelligence = dm.roll_stats()
-
+        self.attack_modifier = dm.get_modifier(self.strength)
 
     def get_stats(self) -> str:
         """ return a formatted string of stats """
@@ -34,6 +34,7 @@ class Character:
         stats += f"Strength: {self.strength}\nDexterity: {self.dexterity}"
         stats += f"\nConstitution: {self.constitution}"
         stats += f"\nIntelligence: {self.intelligence}"
+        stats += f"\nAttack Modifier: {self.attack_modifier}"
         return stats
 
 # global scope

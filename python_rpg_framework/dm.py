@@ -21,6 +21,18 @@ def roll_stats() -> int:
     return stats
 
 
+def get_modifier(stat: int) -> int:
+    """Returns a modifier based on the stat value
+
+    For the Win: use the following table:
+    https://www.modularrealms.com/en-us/blogs/news/how-do-dnd-stats-work
+    """
+    modifier = 0
+    # TODO (FTW: For the Win)
+    # use the table from 
+    return modifier
+
+
 if __name__ == "__main__":
     for i in range(5):
         print(roll_stats())
